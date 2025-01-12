@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Score Keeper - Web Dev Bootcamp</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bulma@1.0.2/css/bulma.min.css"
+    />
+  </head>
+  <body>
+    <main class="container">
+      <div class="scorekeeper panel is-primary is-fullhd">
+        <div class="mainImage">
+          <p class="title panel-heading">Score Keeper</p>
+          <img
+            src="mainimage.jpg"
+            alt="An AI generated Image of a score keeping device"
+            class="is-square"
+            width="640px"
+          />
+        </div>
+        <div class="scoreDisplay panel-block">
+          <p class="p-3">
+            <span id="player1" class="score">0</span>
+            to
+            <span id="player2" class="score">0</span>
+          </p>
+        </div>
+        <p class="panel-block">Use the buttons below to keep score.</p>
+        <div class="panel-block">
+          <label for="scoreSelection" class="pr-4 has-text-weight-semibold"
+            >Playing To</label
+          >
+          <div class="select is-rounded">
+            <select name="playingTo" id="scoreSelection">
+              <option value="3">3</option>
+              <option value="5">5</option>
+              <option value="7">7</option>
+              <option value="9">9</option>
+            </select>
+          </div>
+        </div>
+        <div class="buttons has-addons panel-block">
+          <button id="player1button" class="button is-primary">
+            <label for="player1button">+1 Player 1</label>
+          </button>
+          <button id="player2button" class="button has-background-link">
+            <label for="player2button">+1 Player 2</label>
+          </button>
+          <button
+            type="reset"
+            id="resetbutton"
+            class="button is-danger"
+            disabled
+          >
+            <label for="resetbutton">Reset</label>
+          </button>
+        </div>
+      </div>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>
