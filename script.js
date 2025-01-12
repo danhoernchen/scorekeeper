@@ -17,6 +17,8 @@ resetButton.addEventListener("click", () => {
   playerTwoScore = 0;
   playerOneScoreDisplay.textContent = playerOneScore;
   playerTwoScoreDisplay.textContent = playerTwoScore;
+  playerOneScoreDisplay.classList.remove("has-text-success", "has-text-danger");
+  playerTwoScoreDisplay.classList.remove("has-text-success", "has-text-danger");
   toggleButtons();
 });
 
@@ -34,6 +36,13 @@ function updateScore(player) {
   }
   if (playerOneScore >= upToScore || playerTwoScore >= upToScore) {
     toggleButtons();
+    if (playerOneScore > playerTwoScore) {
+      playerOneScoreDisplay.classList.toggle("has-text-success");
+      playerTwoScoreDisplay.classList.toggle("has-text-danger");
+    } else {
+      playerOneScoreDisplay.classList.toggle("has-text-danger");
+      playerTwoScoreDisplay.classList.toggle("has-text-success");
+    }
   }
 }
 
